@@ -36,8 +36,18 @@ const NewTrainingGenerator = () => {
                 focus: newFocus
             }})
     }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+
+        setParams({
+            time: "",
+            level: "",
+            focus: "",
+        })
+    }
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <h1>Select options for your Training</h1>
             <TrainingTime updateTime={updateTime}/>
             <TrainingLevel updateLevel={updateLevel}/>
