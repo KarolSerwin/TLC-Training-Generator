@@ -49,7 +49,6 @@ const NewTrainingGenerator = ({getParams}) => {
     }
 
 
-
     return (
         <form onSubmit={handleSubmit}>
             <h1>Select options for your Training</h1>

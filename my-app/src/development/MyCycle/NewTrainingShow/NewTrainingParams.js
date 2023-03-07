@@ -1,14 +1,14 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 
 
-const NewTrainingParams = ({trainingParams}) => {
+const NewTrainingParams = ({trainingParams, date}) => {
 
 
-    let date = new Date()
+
 
     return <>
-        <h1>Your new training {date.toLocaleString()}</h1>
+        <h1>Your new training {date} </h1>
         <span>You will train for: {trainingParams.time}  </span>
         <span>at {trainingParams.level} level </span>
         <span>focusing on: {trainingParams.focus} aspect</span>

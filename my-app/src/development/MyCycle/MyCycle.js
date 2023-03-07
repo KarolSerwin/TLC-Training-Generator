@@ -21,6 +21,11 @@ const MyCycle = () => {
         }
     })
 
+    const [date, setDate] = useState("");
+
+
+
+
     //funkcja pobierania paramsow z training generator
     const getParams = (params) => {
 
@@ -51,12 +56,14 @@ const MyCycle = () => {
             }
         })
 
+        setDate(new Date().toLocaleString())
     }
+
 
 
     return <>
         <NewTrainingGenerator getParams={getParams}/>
-        <NewTrainingShow training={newParams}/>
+        <NewTrainingShow training={newParams} date={date}/>
     </>
 }
 
