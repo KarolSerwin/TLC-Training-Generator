@@ -2,12 +2,11 @@ import React from "react";
 import {NewTrainingParams} from "./NewTrainingParams";
 import {NewTrainingContent} from "./NewTrainingContent";
 
-const NewTrainingShow = () => {
+const NewTrainingShow = ({training}) => {
 
     return <>
-
-        <NewTrainingParams />
-        <NewTrainingContent />
+        <NewTrainingParams trainingParams={training.params}/>
+        <NewTrainingContent trainingContent={training.content}/>
     </>
 }
 
