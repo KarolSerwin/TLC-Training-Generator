@@ -5,7 +5,7 @@ import {TrainingLevel} from "./TrainingLevel";
 import {TrainingFocus} from "./TrainingFocus";
 import {ButtonGenerate} from "./ButtonGenerate";
 
-const NewTrainingGenerator = () => {
+const NewTrainingGenerator = ({getParams}) => {
 
     const [params, setParams] = useState({
         time: "",
@@ -39,6 +39,7 @@ const NewTrainingGenerator = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        getParams(params)
 
         setParams({
             time: "",
@@ -46,13 +47,16 @@ const NewTrainingGenerator = () => {
             focus: "",
         })
     }
+
+
+
     return (
         <form onSubmit={handleSubmit}>
             <h1>Select options for your Training</h1>
             <TrainingTime updateTime={updateTime}/>
             <TrainingLevel updateLevel={updateLevel}/>
             <TrainingFocus updateFocus={updateFocus}/>
-            <ButtonGenerate/>
+            <ButtonGenerate onClick={handleSubmit}/>
         </form>
     )
 }

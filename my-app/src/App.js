@@ -1,9 +1,9 @@
 
 import './App.css';
-import {NewTrainingGenerator} from "./development/MyCycle/NewTrainingGenerator";
+import {MyCycle} from "./development/MyCycle/MyCycle";
 
 function App() {
-  return <NewTrainingGenerator/>
+  return <MyCycle/>
 }
 
 export default App;
