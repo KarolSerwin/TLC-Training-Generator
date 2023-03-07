@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import {TrainingTime} from "./TrainingTime";
 import {TrainingLevel} from "./TrainingLevel";
@@ -7,14 +7,41 @@ import {ButtonGenerate} from "./ButtonGenerate";
 
 const NewTrainingGenerator = () => {
 
+    const [params, setParams] = useState({
+        time: "",
+        level: "",
+        focus: "",
+    })
 
+    const updateTime = (newTime) => {
+        setParams( prevState => {
+                return {
+                    ...prevState,
+                    time: newTime
+                }})
+    }
 
+    const updateLevel = (newLevel) => {
+        setParams( prevState => {
+                return {
+                    ...prevState,
+                    level: newLevel
+                }})
+    }
+
+    const updateFocus = (newFocus) => {
+        setParams( prevState => {
+            return {
+                ...prevState,
+                focus: newFocus
+            }})
+    }
     return (
         <form>
             <h1>Select options for your Training</h1>
-            <TrainingTime/>
-            <TrainingLevel/>
-            <TrainingFocus/>
+            <TrainingTime updateTime={updateTime}/>
+            <TrainingLevel updateLevel={updateLevel}/>
+            <TrainingFocus updateFocus={updateFocus}/>
             <ButtonGenerate/>
         </form>
     )

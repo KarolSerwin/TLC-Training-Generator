@@ -1,17 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 
 
 
-const TrainingLevel = () => {
+const TrainingLevel = ({updateLevel}) => {
+
+    const [level, setLevel] = useState("")
+    const handleChange = (event) => {
+        let valueToSave = event.target.value;
+        setLevel(valueToSave)
+        updateLevel(valueToSave)
+    }
 
 
     return (
         <div>
             <label>LEVEL: </label>
-            <select>
-                <option>BEGINNER</option>
-                <option>INTERMEDIATE</option>
-                <option>ADVANCED</option>
+            <select name="option" value={level} onChange={handleChange}>
+                <option value="choose">choose</option>
+                <option value="beginner">BEGINNER</option>
+                <option value="intermediate">INTERMEDIATE</option>
+                <option value="advanced">ADVANCED</option>
 
             </select>
             <a href="/">
