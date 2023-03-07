@@ -4,9 +4,11 @@ import {NewTrainingContent} from "./NewTrainingContent";
 
 const NewTrainingShow = ({training, date}) => {
 
+    const {params, content} = training
+
     return <>
-        <NewTrainingParams trainingParams={training.params} date={date}/>
-        <NewTrainingContent trainingContent={training.content} />
+        <NewTrainingParams trainingParams={params} date={date}/>
+        <NewTrainingContent trainingContent={content} />
     </>
 }
 

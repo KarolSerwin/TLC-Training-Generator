@@ -13,13 +13,23 @@ const NewTrainingGenerator = ({getParams}) => {
         focus: "",
     })
 
-    const updateTime = (newTime) => {
+
+    const updateState = (key, value) => {
+        setParams(prevState => {
+            return {
+                ...prevState,
+                [key]: value
+            }
+        })
+    }
+
+    /*const updateTime = (newTime) => {
         setParams( prevState => {
                 return {
                     ...prevState,
                     time: newTime
                 }})
-    }
+    }*/
 
     const updateLevel = (newLevel) => {
         setParams( prevState => {
@@ -52,7 +62,7 @@ const NewTrainingGenerator = ({getParams}) => {
     return (
         <form onSubmit={handleSubmit}>
             <h1>Select options for your Training</h1>
-            <TrainingTime updateTime={updateTime}/>
+            <TrainingTime updateTime={updateState}/>
             <TrainingLevel updateLevel={updateLevel}/>
             <TrainingFocus updateFocus={updateFocus}/>
             <ButtonGenerate onClick={handleSubmit}/>
