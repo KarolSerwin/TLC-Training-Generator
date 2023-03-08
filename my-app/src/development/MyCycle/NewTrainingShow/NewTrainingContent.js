@@ -5,13 +5,13 @@ const NewTrainingContent = ({trainingContent}) => {
 
     const {a, b, c, d, e} = trainingContent
 
-    return <ul>
-        <li>{a}</li>
-        <li>{b}</li>
-        <li>{c}</li>
-        <li>{d}</li>
-        <li>{e}</li>
-    </ul>
+    return <div>
+        <div dangerouslySetInnerHTML={{__html: a}}/>
+        <div dangerouslySetInnerHTML={{__html: b}}/>
+        <div dangerouslySetInnerHTML={{__html: c}}/>
+        <div dangerouslySetInnerHTML={{__html: d}}/>
+        <div dangerouslySetInnerHTML={{__html: e}}/>
+    </div>
 }
 
 export {NewTrainingContent}
