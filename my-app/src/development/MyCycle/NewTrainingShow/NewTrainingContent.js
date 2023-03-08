@@ -3,12 +3,14 @@ import React from "react";
 
 const NewTrainingContent = ({trainingContent}) => {
 
+    const {a, b, c, d, e} = trainingContent
+
     return <ul>
-        <li>{trainingContent.a}</li>
-        <li>{trainingContent.b}</li>
-        <li>{trainingContent.c}</li>
-        <li>{trainingContent.d}</li>
-        <li>{trainingContent.e}</li>
+        <li>{a}</li>
+        <li>{b}</li>
+        <li>{c}</li>
+        <li>{d}</li>
+        <li>{e}</li>
     </ul>
 }
 

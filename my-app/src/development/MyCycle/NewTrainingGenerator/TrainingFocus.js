@@ -1,21 +1,18 @@
-import React, {useState} from "react";
+import React from "react";
 
 
 const TrainingFocus = ({updateFocus}) => {
 
-    const [focus, setFocus] = useState("")
     const handleChange = (event) => {
         let valueToSave = event.target.value;
-        setFocus(valueToSave)
-        updateFocus(valueToSave)
+        updateFocus("focus", valueToSave)
     }
-
 
     return (
         <div>
             <label>FOCUS: </label>
-            <select name="option" value={focus} onChange={handleChange}>
-                <option value="choose">choose</option>
+            <select name="option"  onChange={handleChange}>
+                <option selected disabled value="choose">choose</option>
                 <option value="technical">Technical</option>
                 <option value="jump">Jump</option>
                 <option value="endurance">Endurance</option>

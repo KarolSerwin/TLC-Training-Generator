@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {NewTrainingGenerator} from "./NewTrainingGenerator/NewTrainingGenerator";
 import {NewTrainingShow} from "./NewTrainingShow/NewTrainingShow";
 import {trainings} from "../trainings/trainings";
@@ -24,8 +24,10 @@ const MyCycle = () => {
     const [date, setDate] = useState("");
 
 
-    //funkcja pobierania paramsow z training generator
+    //funkcja pobierania paramsow z training generator oraz generowania daty
     const getParams = (params) => {
+
+        const {time, level, focus} = params
 
         setNewParams(prevState => {
             return {
@@ -38,7 +40,7 @@ const MyCycle = () => {
             }
         })
 
-        let result = trainings.filter(training => training.params.time === params.time && training.params.level === params.level && training.params.focus === params.focus)
+        let result = trainings.filter(training => training.params.time === time && training.params.level === level && training.params.focus === focus)
         const newResult = result.pop()
 
         setNewParams(prevState => {
@@ -56,11 +58,7 @@ const MyCycle = () => {
 
         setDate(new Date().toLocaleString())
 
-
     }
-
-
-
 
     return <>
         <NewTrainingGenerator getParams={getParams}/>

@@ -13,7 +13,6 @@ const NewTrainingGenerator = ({getParams}) => {
         focus: "",
     })
 
-
     const updateState = (key, value) => {
         setParams(prevState => {
             return {
@@ -23,29 +22,6 @@ const NewTrainingGenerator = ({getParams}) => {
         })
     }
 
-    /*const updateTime = (newTime) => {
-        setParams( prevState => {
-                return {
-                    ...prevState,
-                    time: newTime
-                }})
-    }*/
-
-    const updateLevel = (newLevel) => {
-        setParams( prevState => {
-                return {
-                    ...prevState,
-                    level: newLevel
-                }})
-    }
-
-    const updateFocus = (newFocus) => {
-        setParams( prevState => {
-            return {
-                ...prevState,
-                focus: newFocus
-            }})
-    }
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -63,9 +39,9 @@ const NewTrainingGenerator = ({getParams}) => {
         <form onSubmit={handleSubmit}>
             <h1>Select options for your Training</h1>
             <TrainingTime updateTime={updateState}/>
-            <TrainingLevel updateLevel={updateLevel}/>
-            <TrainingFocus updateFocus={updateFocus}/>
-            <ButtonGenerate onClick={handleSubmit}/>
+            <TrainingLevel updateLevel={updateState}/>
+            <TrainingFocus updateFocus={updateState}/>
+            <ButtonGenerate />
         </form>
     )
 }

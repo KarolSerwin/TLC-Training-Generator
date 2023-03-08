@@ -1,17 +1,12 @@
-import React, {useState} from "react";
-
-
+import React from "react";
 
 
 const TrainingTime = ({updateTime}) => {
 
-    const [time, setTime] = useState("")
     const handleChange = (event) => {
         let valueToSave = event.target.value;
-        setTime(valueToSave)
         updateTime("time", valueToSave)
     }
-
 
     return (
         <div>
