@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import {NewTrainingGenerator} from "./NewTrainingGenerator/NewTrainingGenerator";
 import {NewTrainingShow} from "./NewTrainingShow/NewTrainingShow";
 import {trainings} from "../trainings/trainings";
-
+import {CarouselMain} from "./Carousel";
+import "./myCycle.css"
 const MyCycle = () => {
 
     const [newParams, setNewParams] = useState({
@@ -61,8 +62,11 @@ const MyCycle = () => {
     }
 
     return <>
+        <CarouselMain/>
+        <div className="trainingGenerator">
         <NewTrainingGenerator getParams={getParams}/>
         <NewTrainingShow training={newParams} date={date}/>
+        </div>
     </>
 }
 

@@ -12,6 +12,8 @@ const {time, level, focus} = trainingParams
         <span>You will train for: {time}  </span>
         <span>at {level} level </span>
         <span>focusing on: {focus} aspect</span>
+        <br/>
+        <br/>
     </>
 }
 

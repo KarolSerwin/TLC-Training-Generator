@@ -6,10 +6,10 @@ const NewTrainingShow = ({training, date}) => {
 
     const {params, content} = training
 
-    return <>
+    return <div>
         <NewTrainingParams trainingParams={params} date={date}/>
         <NewTrainingContent trainingContent={content} />
-    </>
+    </div>
 }
 
 export {NewTrainingShow}

@@ -5,7 +5,9 @@ const NewTrainingContent = ({trainingContent}) => {
 
     const {a, b, c, d, e} = trainingContent
 
-    return <div>
+    return <div style={{
+        width: 700
+    }}>
         <div dangerouslySetInnerHTML={{__html: a}}/>
         <div dangerouslySetInnerHTML={{__html: b}}/>
         <div dangerouslySetInnerHTML={{__html: c}}/>
