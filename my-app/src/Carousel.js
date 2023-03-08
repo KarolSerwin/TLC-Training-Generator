@@ -1,9 +1,9 @@
 import React from "react";
 
-import pic1 from "./Images/DSC_6569.jpg"
-import pic2 from "./Images/DSC_6756.jpg"
-import pic3 from "./Images/DSC_6611.jpg"
-import pic4 from "./Images/DSC_6613.jpg"
+import pic1 from "./development/MyCycle/Images/DSC_6569.jpg"
+import pic2 from "./development/MyCycle/Images/DSC_6756.jpg"
+import pic3 from "./development/MyCycle/Images/DSC_6611.jpg"
+import pic4 from "./development/MyCycle/Images/DSC_6613.jpg"
 import "./carousel.css"
 import Carousel from "nuka-carousel";
 
