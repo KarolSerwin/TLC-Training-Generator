@@ -8,6 +8,7 @@ const MyCycle = () => {
 
     const [newParams, setNewParams] = useState({
 
+        id: "",
         params: {
             time: "",
             level: "",
@@ -31,23 +32,16 @@ const MyCycle = () => {
 
         const {time, level, focus} = params
 
-        setNewParams(prevState => {
-            return {
-                ...prevState,
-                params: {
-                    time: params.time,
-                    level: params.level,
-                    focus: params.focus
-                }
-            }
-        })
-
         let result = trainings.filter(training => training.params.time === time && training.params.level === level && training.params.focus === focus)
         const newResult = result.pop()
 
-        setNewParams(prevState => {
-            return {
-                ...prevState,
+        setNewParams({
+                id: newResult.id,
+                params: {
+                    time: newResult.params.time,
+                    level: newResult.params.level,
+                    focus: newResult.params.focus
+                },
                 content: {
                     a: newResult.content.a,
                     b: newResult.content.b,
@@ -55,7 +49,7 @@ const MyCycle = () => {
                     d: newResult.content.d,
                     e: newResult.content.e
                 }
-            }
+
         })
 
         setDate(new Date().toLocaleString())
