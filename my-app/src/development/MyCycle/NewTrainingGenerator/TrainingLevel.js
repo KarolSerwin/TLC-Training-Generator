@@ -10,7 +10,7 @@ const TrainingLevel = ({updateLevel}) => {
 
     return (
         <div>
-            <label>LEVEL: </label>
+            <span>LEVEL: </span>
             <select name="option" onChange={handleChange}>
                 <option selected disabled value="choose">choose</option>
                 <option value="beginner">BEGINNER</option>

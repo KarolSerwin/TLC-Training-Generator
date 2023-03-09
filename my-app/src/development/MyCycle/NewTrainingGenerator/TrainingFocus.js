@@ -10,7 +10,7 @@ const TrainingFocus = ({updateFocus}) => {
 
     return (
         <div>
-            <label>FOCUS: </label>
+            <span>FOCUS: </span>
             <select name="option"  onChange={handleChange}>
                 <option selected disabled value="choose">choose</option>
                 <option value="technical">Technical</option>

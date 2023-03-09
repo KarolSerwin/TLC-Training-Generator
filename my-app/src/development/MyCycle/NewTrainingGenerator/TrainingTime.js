@@ -10,7 +10,7 @@ const TrainingTime = ({updateTime}) => {
 
     return (
         <div>
-            <label>TIME: </label>
+            <span>TIME: </span>
             <select name="option"  onChange={handleChange}>
                 <option selected disabled value="time">min</option>
                 <option value="60min">60 min</option>
