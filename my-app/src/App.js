@@ -51,7 +51,7 @@ function App() {
     <div>
       <CarouselMain/>
       <ul className="navigation">
-        <li><Link className="navLink" to="/my-profile">My Profile</Link></li>
+        <li><Link className="navLink" to="/">My Profile</Link></li>
         <li><Link className="navLink" to="/my-cycle">My Cycle</Link></li>
         <li><Link className="navLink" to="/team-cycle">Team Cycle</Link></li>
         <li><Link className="navLink" to="/methods">TLC Methods</Link></li>
@@ -59,7 +59,7 @@ function App() {
     </div>
     <Routes>
       <Route element={<ProtectedRoutes user={user}/> }>
-        <Route path="my-profile" element={<MyProfile user={user}/>} />
+        <Route path="" element={<MyProfile user={user}/>} />
         <Route path="my-cycle" element={<MyCycle/>} />
         <Route path="team-cycle" element={<TeamCycle/>} />
         <Route path="methods" element={<Methods/>} />

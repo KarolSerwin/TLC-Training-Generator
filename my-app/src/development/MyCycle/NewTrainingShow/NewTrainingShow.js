@@ -15,16 +15,19 @@ const NewTrainingShow = ({training, date, showButtons}) => {
 
     const handleClickSave = () => {
 
-        const newTraining = [training]
+
+        const {id, params, content} = training
+        const firstNewTraining = [{id, date, params, content}]
+        const newTraining = {id, date, params, content}
 
         if (localStorage.getItem("trainings")) {
 
             const previousTrainings = JSON.parse(localStorage.getItem("trainings"))
-            const actualTrainings = [...previousTrainings, training ]
+            const actualTrainings = [...previousTrainings, newTraining ]
             localStorage.setItem("trainings", JSON.stringify(actualTrainings))
 
         } else {
-            localStorage.setItem("trainings", JSON.stringify(newTraining))
+            localStorage.setItem("trainings", JSON.stringify(firstNewTraining))
         }
     }
 

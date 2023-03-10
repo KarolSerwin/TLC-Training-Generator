@@ -16,7 +16,7 @@ const Login = ({updateState}) => {
 
         if (password === "tlc") {
             updateState("on")
-            navigate("/my-profile")
+            navigate("/")
 
             localStorage.setItem("user", name)
         }

@@ -52,7 +52,7 @@ const MyCycle = () => {
 
         })
 
-        setDate(new Date().toLocaleString())
+        setDate(new Date().toLocaleDateString())
 
         setShowButtons(true)
 
