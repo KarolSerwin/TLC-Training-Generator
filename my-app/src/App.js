@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState,} from "react";
 import {BrowserRouter, Link, Route, Routes, Navigate, Outlet} from "react-router-dom";
 import './App.css';
 import {MyCycle} from "./development/MyCycle/MyCycle";
@@ -17,33 +17,34 @@ import  {faCake} from "@fortawesome/free-solid-svg-icons";
 
 function App() {
 
-  const [user, setUser] = useState(false)
+  const [user, setUser] = useState("on")
 
-  const [activePage, setActivePage] = useState(false)
-  //useEffect get item user const user =
 
- /* useEffect(()=> {
+  useEffect(()=> {
 
-     if (localStorage.getItem("user")) {
-     setUser(true)
+     if (!localStorage.getItem("user")) {
+       setUser("off")
 
-  },[])*/
+     }
+  },[])
+
+
 
   const ProtectedRoutes = ({
     user,
     redirectPath = "/login",
     children
   }) => {
-    if (!user) {
-      return <Navigate to={redirectPath} replace />
+    if (user === "off") {
+      return <Navigate to={redirectPath} />
     }
     return children ? children : <Outlet/>
   };
 
+
   const updateState = (user) => {
     setUser(user)
   }
-
 
 
   return <BrowserRouter>
@@ -54,16 +55,17 @@ function App() {
         <li><Link className="navLink" to="/my-cycle">My Cycle</Link></li>
         <li><Link className="navLink" to="/team-cycle">Team Cycle</Link></li>
         <li><Link className="navLink" to="/methods">TLC Methods</Link></li>
-
       </ul>
     </div>
     <Routes>
-      <Route path="login" element={<Login updateState={updateState}/>} />
       <Route element={<ProtectedRoutes user={user}/> }>
-        <Route path="my-profile" element={<MyProfile/>} />
+        <Route path="my-profile" element={<MyProfile user={user}/>} />
         <Route path="my-cycle" element={<MyCycle/>} />
         <Route path="team-cycle" element={<TeamCycle/>} />
         <Route path="methods" element={<Methods/>} />
+      </Route>
+      <Route>
+        <Route path="login" element={<Login updateState={updateState}/>} />
       </Route>
     </Routes>
   </BrowserRouter>

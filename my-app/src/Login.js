@@ -15,10 +15,10 @@ const Login = ({updateState}) => {
         e.preventDefault()
 
         if (password === "tlc") {
-            updateState(true)
+            updateState("on")
             navigate("/my-profile")
 
-            //localStorage.setItem("user", name)
+            localStorage.setItem("user", name)
         }
 
     }
@@ -28,7 +28,6 @@ const Login = ({updateState}) => {
     }
     const handleChangePassword = (event) => {
         setPassword(event.target.value)
-
     }
 
     return <div>
@@ -47,5 +46,4 @@ const Login = ({updateState}) => {
 
     </div>
 }
-
 export {Login}
