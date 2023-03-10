@@ -32,6 +32,8 @@ const NewTrainingGenerator = ({getParams}) => {
             level: "",
             focus: "",
         })
+
+
     }
 
 

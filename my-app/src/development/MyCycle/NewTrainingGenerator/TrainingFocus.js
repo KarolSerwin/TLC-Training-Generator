@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 
 const TrainingFocus = ({updateFocus}) => {
@@ -7,6 +7,7 @@ const TrainingFocus = ({updateFocus}) => {
         let valueToSave = event.target.value;
         updateFocus("focus", valueToSave)
     }
+
 
     return (
         <div>

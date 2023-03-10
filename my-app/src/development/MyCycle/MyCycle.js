@@ -25,7 +25,7 @@ const MyCycle = () => {
 
     const [date, setDate] = useState("");
 
-    const [showButtonPrint, setShowButtonPrint] = useState(false)
+    const [showButtons, setShowButtons] = useState(false)
 
     //funkcja pobierania paramsow z training generator oraz generowania daty
     const getParams = (params) => {
@@ -54,14 +54,14 @@ const MyCycle = () => {
 
         setDate(new Date().toLocaleString())
 
-        setShowButtonPrint(true)
+        setShowButtons(true)
 
     }
 
     return <>
         <div className="trainingGenerator">
         <NewTrainingGenerator getParams={getParams}/>
-        <NewTrainingShow showButton={showButtonPrint} training={newParams} date={date}/>
+        <NewTrainingShow showButtons={showButtons}  training={newParams} date={date}/>
         </div>
     </>
 }
