@@ -4,7 +4,8 @@ import pic1 from "./development/Images/DSC_6569.jpg"
 import pic2 from "./development/Images/DSC_6756.jpg"
 import pic3 from "./development/Images/DSC_6611.jpg"
 import pic4 from "./development/Images/DSC_6613.jpg"
-import "./carousel.css"
+
+import "./carousel.scss"
 import Carousel from "nuka-carousel";
 
 

@@ -9,15 +9,17 @@ const TrainingLevel = ({updateLevel}) => {
     }
 
     return (
-        <div>
-            <span>LEVEL: </span>
-            <select name="option" onChange={handleChange}>
-                <option selected disabled value="choose">choose</option>
-                <option value="beginner">BEGINNER</option>
-                <option value="intermediate">INTERMEDIATE</option>
-                <option value="advanced">ADVANCED</option>
+        <div className="trainingGenerator-form-param">
+            <div>
+                <span>LEVEL: </span>
+                <select name="option"  onChange={handleChange}>
+                    <option selected disabled value="choose">choose</option>
+                    <option value="beginner">BEGINNER</option>
+                    <option value="intermediate">INTERMEDIATE</option>
+                    <option value="advanced">ADVANCED</option>
 
-            </select>
+                </select>
+            </div>
             <a href="/">
                 -- Verify your level --
             </a>

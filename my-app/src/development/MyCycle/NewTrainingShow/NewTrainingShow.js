@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import {NewTrainingParams} from "./NewTrainingParams";
 import {NewTrainingContent} from "./NewTrainingContent";
-import "./trainingShow.css"
+import "./trainingShow.scss"
 
 import ReactToPrint from 'react-to-print'
 
@@ -29,6 +29,9 @@ const NewTrainingShow = ({training, date, showButtons}) => {
         } else {
             localStorage.setItem("trainings", JSON.stringify(firstNewTraining))
         }
+
+        window.location.reload();
+
     }
 
     const handleClickReset = () => {

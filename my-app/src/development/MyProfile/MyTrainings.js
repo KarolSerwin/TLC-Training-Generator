@@ -7,7 +7,9 @@ const MyTrainings = ({trainings}) => {
 
 
 
-    const reverseTrainings = trainings.reverse()
+    const reverseTrainings = trainings.sort((a,b) => parseFloat(b.date) - parseFloat(a.date))
+
+
 
     const styles = {
             wrapAround: false,
@@ -15,7 +17,7 @@ const MyTrainings = ({trainings}) => {
             style: {
                 width: 1200,
                 height: "60vh",
-                marginTop: 50,
+                marginTop: 150,
                 marginLeft: 50
             }
 
@@ -23,7 +25,9 @@ const MyTrainings = ({trainings}) => {
 
         return <div className="carousel">
             <Carousel {...styles}>
-                {trainings ? reverseTrainings.map((training, index) => <OneTraining index={index} training={training}/>) : <h2> You don't have any workout yet </h2>}
+                {trainings ? reverseTrainings.map((training, index) =>
+                    <OneTraining key={index} training={training}/>) :
+                    <h2> You don't have any workout yet </h2>}
             </Carousel>
         </div>
 

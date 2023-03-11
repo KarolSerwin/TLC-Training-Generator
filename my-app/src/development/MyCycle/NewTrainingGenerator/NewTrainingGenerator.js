@@ -38,7 +38,7 @@ const NewTrainingGenerator = ({getParams}) => {
 
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="trainingGenerator-form">
             <h1>Select options for your Training</h1>
             <TrainingTime updateTime={updateState}/>
             <TrainingLevel updateLevel={updateState}/>

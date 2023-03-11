@@ -1,5 +1,5 @@
 import React from "react";
-import "./trainingShow.css"
+import "./trainingShow.scss"
 
 const NewTrainingContent = ({trainingContent}) => {
 

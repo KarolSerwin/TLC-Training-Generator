@@ -1,9 +1,9 @@
 import React, {useEffect, useState,} from "react";
 import {BrowserRouter, Link, Route, Routes, Navigate, Outlet} from "react-router-dom";
-import './App.css';
+import './App.scss';
 import {MyCycle} from "./development/MyCycle/MyCycle";
 import {CarouselMain} from "./Carousel";
-import "./carousel.css"
+import "./carousel.scss"
 import {MyProfile} from "./development/MyProfile/MyProfile";
 import {TeamCycle} from "./development/TeamCycle/TeamCycle";
 import {Methods} from "./development/Methods/Methods";
@@ -48,13 +48,13 @@ function App() {
 
 
   return <BrowserRouter>
-    <div>
+    <div className="app">
       <CarouselMain/>
-      <ul className="navigation">
-        <li><Link className="navLink" to="/">My Profile</Link></li>
-        <li><Link className="navLink" to="/my-cycle">My Cycle</Link></li>
-        <li><Link className="navLink" to="/team-cycle">Team Cycle</Link></li>
-        <li><Link className="navLink" to="/methods">TLC Methods</Link></li>
+      <ul className="app-navig">
+        <li><Link className="app-navig-link" to="/">My Profile</Link></li>
+        <li><Link className="app-navig-link" to="/my-cycle">My Cycle</Link></li>
+        <li><Link className="app-navig-link" to="/team-cycle">Team Cycle</Link></li>
+        <li><Link className="app-navig-link" to="/methods">TLC Methods</Link></li>
       </ul>
     </div>
     <Routes>

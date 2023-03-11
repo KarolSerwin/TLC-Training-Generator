@@ -3,7 +3,7 @@ import {NewTrainingGenerator} from "./NewTrainingGenerator/NewTrainingGenerator"
 import {NewTrainingShow} from "./NewTrainingShow/NewTrainingShow";
 import {trainings} from "../trainings/trainings";
 
-import "./myCycle.css"
+import "./myCycle.scss"
 const MyCycle = () => {
 
     const [newParams, setNewParams] = useState({

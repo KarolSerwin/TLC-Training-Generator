@@ -1,10 +1,10 @@
 import React from "react";
 
 
-const OneTraining = ({training, index}) => {
+const OneTraining = ({training}) => {
 
     const {id, date, params, content} = training
-    return <div key={index} style={{marginLeft: 100, width: 1000}}>
+    return <div style={{marginLeft: 100, width: 1000}}>
 
         <h2>From: {date}</h2>
         <br/>

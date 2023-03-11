@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 
 
 const TrainingFocus = ({updateFocus}) => {
@@ -10,14 +10,16 @@ const TrainingFocus = ({updateFocus}) => {
 
 
     return (
-        <div>
-            <span>FOCUS: </span>
-            <select name="option"  onChange={handleChange}>
-                <option selected disabled value="choose">choose</option>
-                <option value="technical">Technical</option>
-                <option value="jump">Jump</option>
-                <option value="endurance">Endurance</option>
-            </select>
+        <div className="trainingGenerator-form-param">
+            <div>
+                <span>FOCUS: </span>
+                <select name="option"   onChange={handleChange}>
+                    <option selected disabled value="choose">choose</option>
+                    <option value="technical">Technical</option>
+                    <option value="jump">Jump</option>
+                    <option value="endurance">Endurance</option>
+                </select>
+            </div>
             <a href="/">
                 -- Learn about training focus --
             </a>

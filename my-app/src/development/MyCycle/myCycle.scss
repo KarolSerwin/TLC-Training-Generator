@@ -1,0 +1,39 @@
+.trainingGenerator {
+    display: flex;
+    justify-content: space-around;
+
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+
+
+
+        &-param {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 24px;
+
+            select {
+                font-size: 20px;
+                outline: none;
+                border-radius: 10px;
+                padding: 5px 0;
+            }
+
+        }
+
+        &-btn {
+            outline: none;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+
+
+    }
+}
