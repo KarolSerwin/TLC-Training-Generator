@@ -20,8 +20,8 @@ const TrainingFocus = ({updateFocus}) => {
                     <option value="endurance">Endurance</option>
                 </select>
             </div>
-            <a href="/">
-                -- Learn about training focus --
+            <a href="/" >
+                -- About training focus --
             </a>
         </div>
     )

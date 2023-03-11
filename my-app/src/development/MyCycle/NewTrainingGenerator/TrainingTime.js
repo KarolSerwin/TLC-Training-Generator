@@ -20,7 +20,7 @@ const TrainingTime = ({updateTime}) => {
                 </select>
             </div>
             <a href="/">
-                -- Learn about training time --
+                -- About training time --
             </a>
         </div>
     )

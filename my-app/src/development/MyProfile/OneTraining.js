@@ -4,10 +4,9 @@ import React from "react";
 const OneTraining = ({training}) => {
 
     const {id, date, params, content} = training
-    return <div style={{marginLeft: 100, width: 1000}}>
+    return <div className="myProfile-training-show" >
 
         <h2>From: {date}</h2>
-        <br/>
         <h2> {params.time} -- {params.level} -- {params.focus} </h2>
         <div dangerouslySetInnerHTML={{__html: content.a}}/>
         <div dangerouslySetInnerHTML={{__html: content.b}}/>

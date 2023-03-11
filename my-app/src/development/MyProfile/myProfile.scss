@@ -4,6 +4,29 @@
   text-align: center;
   margin-top: 100px;
 
+  p {
+    font-size: 24px;
+  }
 
+  &-carousel {
+
+
+    &-oneTraining {
+      width: 1000px;
+      margin-left: 100px;
+    }
+  }
+
+.myProfile-training-show {
+
+  width: 1000px;
+  margin-left: 60px;
+  padding: 0 10px;
+  box-shadow: 0 0 10px 5px #5d5151;
+
+  h2 {
+    padding-top: 10px;
+  }
+}
 
 }

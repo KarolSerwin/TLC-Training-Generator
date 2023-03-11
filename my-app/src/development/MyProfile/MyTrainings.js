@@ -12,25 +12,24 @@ const MyTrainings = ({trainings}) => {
 
 
     const styles = {
-            wrapAround: false,
+            wrapAround: true,
             animation: "zoom",
             style: {
                 width: 1200,
                 height: "60vh",
-                marginTop: 150,
+                marginTop: 50,
                 marginLeft: 50
             }
 
         }
 
-        return <div className="carousel">
+        return <div className="carousel myProfile-container-carousel">
             <Carousel {...styles}>
                 {trainings ? reverseTrainings.map((training, index) =>
                     <OneTraining key={index} training={training}/>) :
                     <h2> You don't have any workout yet </h2>}
             </Carousel>
         </div>
-
 
 }
 

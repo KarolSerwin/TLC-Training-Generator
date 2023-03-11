@@ -6,7 +6,7 @@ const InstagramRider = ({post}) => {
 
 
     return <div>
-        <InstagramEmbed url={post} width={500}/>
+        <InstagramEmbed url={post} width={550}/>
     </div>
 }
 
