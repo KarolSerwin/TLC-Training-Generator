@@ -3,7 +3,7 @@ import {BrowserRouter, Link, Route, Routes, Navigate, Outlet} from "react-router
 import './App.scss';
 import {MyCycle} from "./development/MyCycle/MyCycle";
 import {CarouselMain} from "./Carousel";
-import "./carousel.scss"
+
 import {MyProfile} from "./development/MyProfile/MyProfile";
 import {TeamCycle} from "./development/TeamCycle/TeamCycle";
 import {Methods} from "./development/Methods/Methods";
