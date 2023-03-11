@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import {NewTrainingParams} from "./NewTrainingParams";
 import {NewTrainingContent} from "./NewTrainingContent";
-import "./trainingShow.scss"
+
 
 import ReactToPrint from 'react-to-print'
 
@@ -38,13 +38,13 @@ const NewTrainingShow = ({training, date, showButtons}) => {
         window.location.reload();
     }
 
-    return <div>
+    return <div className="trainingGenerator-show">
 
-        <div ref={componentRef}>
+        <div ref={componentRef} className="trainingGenerator-show-body">
             <NewTrainingParams  trainingParams={params} date={date}/>
             <NewTrainingContent  trainingContent={content} />
         </div>
-        <div style={{display: showButtons ? "flex" : "none"}} className="trainingShowButtonsWrap">
+        <div style={{display: showButtons ? "flex" : "none"}} className="trainingGenerator-show-btns">
             <button onClick={handleClickReset}>Reset</button>
             <button onClick={handleClickSave}>Save Training</button>
             <ReactToPrint bodyClass="pdf"

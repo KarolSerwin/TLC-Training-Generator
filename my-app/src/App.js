@@ -56,19 +56,19 @@ function App() {
         <li><Link className="app-navig-link" to="/team-cycle">Team Cycle</Link></li>
         <li><Link className="app-navig-link" to="/methods">TLC Methods</Link></li>
       </ul>
+      <Routes>
+        <Route element={<ProtectedRoutes user={user}/> }>
+          <Route path="" element={<MyProfile user={user}/>} />
+          <Route path="my-cycle" element={<MyCycle/>} />
+          <Route path="team-cycle" element={<TeamCycle/>} />
+          <Route path="methods" element={<Methods/>} />
+        </Route>
+        <Route>
+          <Route path="login" element={<Login updateState={updateState}/>} />
+        </Route>
+      </Routes>
     </div>
-    <Routes>
-      <Route element={<ProtectedRoutes user={user}/> }>
-        <Route path="" element={<MyProfile user={user}/>} />
-        <Route path="my-cycle" element={<MyCycle/>} />
-        <Route path="team-cycle" element={<TeamCycle/>} />
-        <Route path="methods" element={<Methods/>} />
-      </Route>
-      <Route>
-        <Route path="login" element={<Login updateState={updateState}/>} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
+    </BrowserRouter>
 }
 
 export default App;

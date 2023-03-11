@@ -7,7 +7,7 @@ const NewTrainingParams = ({trainingParams, date}) => {
 const {time, level, focus} = trainingParams
 
 
-    return <div>
+    return <div className="trainingGenerator-show-body-params">
         <h1>Your new training {date} </h1>
         <span>You will train for: {time}  </span>
         <span>at {level} level </span>

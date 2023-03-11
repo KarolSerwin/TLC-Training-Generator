@@ -58,12 +58,12 @@ const MyCycle = () => {
 
     }
 
-    return <>
+    return <div>
         <div className="trainingGenerator">
         <NewTrainingGenerator getParams={getParams}/>
         <NewTrainingShow showButtons={showButtons}  training={newParams} date={date}/>
         </div>
-    </>
+    </div>
 }
 
 export {MyCycle}

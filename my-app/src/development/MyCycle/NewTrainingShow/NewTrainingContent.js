@@ -1,11 +1,11 @@
 import React from "react";
-import "./trainingShow.scss"
+
 
 const NewTrainingContent = ({trainingContent}) => {
 
     const {a, b, c, d, e} = trainingContent
 
-    return <div  className="trainingContent" >
+    return <div  className="trainingGenerator-show-body-content" >
         <div dangerouslySetInnerHTML={{__html: a}}/>
         <div dangerouslySetInnerHTML={{__html: b}}/>
         <div dangerouslySetInnerHTML={{__html: c}}/>
