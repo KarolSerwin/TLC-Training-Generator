@@ -1,34 +1,48 @@
-import React from "react";
+import React, {useRef} from "react";
 import {OneTraining} from "./OneTraining";
 import Carousel from "nuka-carousel";
+import ReactToPrint from "react-to-print";
 
 
 const MyTrainings = ({trainings}) => {
 
-
-
     const reverseTrainings = trainings.sort((a,b) => parseFloat(b.date) - parseFloat(a.date))
 
+    const componentRef = useRef();
 
+    const handleClickRemove = () => {
+
+        localStorage.removeItem("trainings");
+        window.location.reload();
+    }
 
     const styles = {
             wrapAround: true,
             animation: "zoom",
             style: {
                 width: 1200,
-                height: "60vh",
+                height: "50vh",
                 marginTop: 50,
-                marginLeft: 50
+                marginLeft: 90
             }
 
         }
 
-        return <div className="carousel myProfile-container-carousel">
-            <Carousel {...styles}>
-                {trainings ? reverseTrainings.map((training, index) =>
-                    <OneTraining key={index} training={training}/>) :
-                    <h2> You don't have any workout yet </h2>}
-            </Carousel>
+
+        return <div style={{display: trainings ? "flex" : "none"}} className="carousel myProfile-container-carousel">
+               <div ref={componentRef}>
+                <Carousel {...styles}>
+                    {reverseTrainings.map((training, index) =>
+                        <OneTraining key={index} training={training}/>)}
+                </Carousel>
+               </div >
+                <div className="carousel myProfile-container-carousel-btns" style={{display: trainings ? "block" : "none"}}>
+                    <ReactToPrint bodyClass="pdf2"
+                                  documentTitle="TLC training"
+                                  trigger={() => <button>Print or Download</button>}
+                                  content={() => componentRef.current} />
+                    <button onClick={handleClickRemove}>Delete all trainings</button>
+                </div>
         </div>
 
 }

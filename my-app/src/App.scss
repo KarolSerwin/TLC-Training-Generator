@@ -21,12 +21,20 @@
     &-navig {
         display: flex;
         justify-content: space-around;
-        font-size: 30px;
+        font-size: 40px;
         list-style: none;
+
 
         &-link {
             color: white;
             font-weight: bold;
+            text-decoration: none;
+
+            &:hover {
+                font-size: 42px;
+                text-shadow: 2px 2px black;
+                transition: 0.3s;
+            }
 
             &:visited {
                 color: white;

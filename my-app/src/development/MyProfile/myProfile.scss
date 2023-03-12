@@ -4,29 +4,52 @@
   text-align: center;
   margin-top: 100px;
 
+
   p {
     font-size: 24px;
   }
 
   &-carousel {
-
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &-oneTraining {
       width: 1000px;
       margin-left: 100px;
     }
+
+    &-btns {
+
+
+
+      button {
+        outline: none;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 10px 20px;
+        font-weight: bold;
+        margin: 0 20px;
+      }
+    }
   }
 
-.myProfile-training-show {
+  .myProfile-training-show {
 
-  width: 1000px;
-  margin-left: 60px;
-  padding: 0 10px;
-  box-shadow: 0 0 10px 5px #5d5151;
+    width: 1000px;
+    margin-left: 40px;
+    padding: 0 10px;
+    box-shadow: 0 0 10px 5px #5d5151;
 
-  h2 {
-    padding-top: 10px;
+    h2 {
+      padding-top: 10px;
+    }
   }
+
 }
 
+.pdf2 {
+  width: 90%;
+  padding: 50px 50px;
 }
