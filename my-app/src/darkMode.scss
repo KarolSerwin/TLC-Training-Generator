@@ -1,0 +1,88 @@
+
+.dark {
+  background-color: #333;
+  color: #fff;
+
+
+}
+.light {
+  background-color: #fff;
+  color: #333;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    font-weight: bold;
+  }
+
+  .link {
+    font-size: 22px;
+    font-weight: bold;
+
+    &:visited {
+      color: white;
+    }
+  }
+
+  &-form {
+    text-align: center;
+
+
+    &-inputWrap {
+      display: flex;
+      justify-content: space-between;
+      width: 350px;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    &-btn {
+      font-size: 24px;
+      outline: none;
+      border: 1px solid black;
+      border-radius: 15px;
+      padding: 5px 130px;
+      font-weight: bold;
+      margin-bottom: 50px;
+
+    }
+  }
+}
+
+.app-navig {
+  display: flex;
+  justify-content: space-around;
+  font-size: 40px;
+  list-style: none;
+
+
+  &-link {
+    /*color: white;*/
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+    &:hover {
+      font-size: 42px;
+      text-shadow: 2px 2px 2px black;
+      transition: 0.3s;
+    }
+
+    &:visited {
+      text-shadow: 2px 2px 2px black;
+      color: white;
+      border: 1px solid black;
+
+
+    }
+  }
+}

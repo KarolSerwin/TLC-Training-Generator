@@ -2,13 +2,15 @@ import React, {useEffect, useState,} from "react";
 import {BrowserRouter, Link, Route, Routes, Navigate, Outlet} from "react-router-dom";
 import './App.scss';
 import {MyCycle} from "./development/MyCycle/MyCycle";
-import {CarouselMain} from "./Carousel";
+import {CarouselMain} from "./CarouselMain";
 
 import {MyProfile} from "./development/MyProfile/MyProfile";
 import {TeamCycle} from "./development/TeamCycle/TeamCycle";
 import {Methods} from "./development/Methods/Methods";
 import {Login} from "./Login";
 
+import {TopBar} from "./TopBar";
+import './darkMode.scss'
 /*
 Font awsome pattern
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -19,15 +21,12 @@ function App() {
 
   const [user, setUser] = useState("on")
 
-
   useEffect(()=> {
 
      if (!localStorage.getItem("user")) {
        setUser("off")
-
      }
   },[])
-
 
 
   const ProtectedRoutes = ({
@@ -41,14 +40,30 @@ function App() {
     return children ? children : <Outlet/>
   };
 
-
   const updateState = (user) => {
     setUser(user)
   }
 
 
+  const [theme, setTheme] = useState(
+      localStorage.getItem('theme') || 'light'
+  );
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  };
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+    document.body.className = theme;
+  }, [theme]);
+
+
   return <BrowserRouter>
-    <div className="app">
+    <div className={`App ${theme}`}>
+      <TopBar user={user} toggle={toggleTheme}/>
       <CarouselMain/>
       <ul className="app-navig">
         <li><Link className="app-navig-link" to="/">My Profile</Link></li>
