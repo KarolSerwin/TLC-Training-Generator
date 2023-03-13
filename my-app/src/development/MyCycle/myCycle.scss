@@ -29,11 +29,10 @@
                     color: white;
                 }
             }
-
-
         }
 
         &-btn {
+            cursor: pointer;
             outline: none;
             border: 1px solid black;
             border-radius: 15px;
@@ -46,34 +45,21 @@
 
     &-show {
 
-
-
         &-body {
 
             max-width: 700px;
             padding-bottom: 50px;
 
-
             &-params{
-
 
                 .span {
                     font-size: 22px;
                     font-weight: 600;
 
-
                     b {
                         font-size: 24px;
-
                     }
-
-
                 }
-
-            }
-
-            &-constent{
-
             }
         }
 
@@ -84,6 +70,7 @@
             margin-bottom: 100px;
 
             button {
+                cursor: pointer;
                 outline: none;
                 border: 1px solid black;
                 border-radius: 15px;

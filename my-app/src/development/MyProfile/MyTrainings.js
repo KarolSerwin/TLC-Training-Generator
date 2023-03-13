@@ -23,7 +23,8 @@ const MyTrainings = ({trainings}) => {
                 width: 1200,
                 height: "50vh",
                 marginTop: 50,
-                marginLeft: 90
+                marginLeft: 90,
+                paddingBottom: 20
             }
 
         }
