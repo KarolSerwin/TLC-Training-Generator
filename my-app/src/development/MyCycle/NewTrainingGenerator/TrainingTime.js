@@ -1,4 +1,5 @@
 import React from "react";
+import {HashLink} from "react-router-hash-link";
 
 
 const TrainingTime = ({updateTime}) => {
@@ -19,9 +20,9 @@ const TrainingTime = ({updateTime}) => {
                     <option value="90min">90 min</option>
                 </select>
             </div>
-            <a href="/">
+            <HashLink smooth to="/methods#time" >
                 -- About training time --
-            </a>
+            </HashLink>
         </div>
     )
 }

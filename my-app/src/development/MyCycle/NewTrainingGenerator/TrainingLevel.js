@@ -1,4 +1,5 @@
 import React from "react";
+import {HashLink} from "react-router-hash-link";
 
 
 const TrainingLevel = ({updateLevel}) => {
@@ -20,9 +21,9 @@ const TrainingLevel = ({updateLevel}) => {
 
                 </select>
             </div>
-            <a href="/">
+            <HashLink smooth to="/methods#level" >
                 -- Verify your level --
-            </a>
+            </HashLink>
 
         </div>
     )

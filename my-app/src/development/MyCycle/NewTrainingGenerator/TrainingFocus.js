@@ -1,5 +1,5 @@
 import React from "react";
-
+import {HashLink} from "react-router-hash-link";
 
 const TrainingFocus = ({updateFocus}) => {
 
@@ -20,9 +20,9 @@ const TrainingFocus = ({updateFocus}) => {
                     <option value="endurance">Endurance</option>
                 </select>
             </div>
-            <a href="/" >
+            <HashLink smooth to="/methods#focus" >
                 -- About training focus --
-            </a>
+            </HashLink>
         </div>
     )
 }

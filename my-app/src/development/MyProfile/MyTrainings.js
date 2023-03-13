@@ -26,7 +26,6 @@ const MyTrainings = ({trainings}) => {
                 marginLeft: 90,
                 paddingBottom: 20
             }
-
         }
 
 

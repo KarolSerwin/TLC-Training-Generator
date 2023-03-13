@@ -4,12 +4,10 @@ import {useNavigate} from "react-router-dom";
 
 const Login = ({updateState}) => {
 
-
     const [name, setName] = useState("")
     const [password, setPassword] = useState("")
 
     const navigate = useNavigate()
-
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -20,7 +18,6 @@ const Login = ({updateState}) => {
 
             localStorage.setItem("user", name)
         }
-
     }
 
     const handleChangeName = (event) => {
