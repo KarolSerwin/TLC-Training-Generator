@@ -19,6 +19,7 @@ const CarouselMain = () => {
         style: {
             width: 1600,
             height: "50vh",
+            borderRadius: 10
 
         }
 
