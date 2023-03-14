@@ -1,7 +1,7 @@
 .trainingGenerator {
     display: flex;
     justify-content: space-around;
-    background-color: #69abcc;
+
     border-radius: 20px;
 
 
@@ -64,13 +64,20 @@
                     }
                 }
             }
+
+            &-content {
+                line-height: 1.5;
+            }
         }
 
         &-btns {
-            display: flex;
-            justify-content: flex-end;
-            gap: 30px;
-            margin-bottom: 100px;
+
+
+            &-in {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 50px;
+            }
 
             button {
                 cursor: pointer;
@@ -81,6 +88,18 @@
                 font-weight: bold;
             }
 
+            .methods-link {
+                color: whitesmoke;
+                font-weight: bold;
+                font-size: 24px;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                margin-left: 70px;
+
+                &:visited {
+                    color: whitesmoke;
+                    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                }
+            }
 
         }
     }

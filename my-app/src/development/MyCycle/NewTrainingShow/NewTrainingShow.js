@@ -4,6 +4,7 @@ import {NewTrainingContent} from "./NewTrainingContent";
 
 
 import ReactToPrint from 'react-to-print'
+import {Link} from "react-router-dom";
 
 
 const NewTrainingShow = ({training, date, showButtons}) => {
@@ -44,13 +45,16 @@ const NewTrainingShow = ({training, date, showButtons}) => {
             <NewTrainingParams  trainingParams={params} date={date}/>
             <NewTrainingContent  trainingContent={content} />
         </div>
-        <div style={{display: showButtons ? "flex" : "none"}} className="trainingGenerator-show-btns">
+        <div style={{display: showButtons ? "block" : "none"}} className="trainingGenerator-show-btns">
+            <div className="trainingGenerator-show-btns-in">
             <button onClick={handleClickReset}>Reset</button>
             <button onClick={handleClickSave}>Save Training to My Profile</button>
             <ReactToPrint bodyClass="pdf"
                           documentTitle="TLC training"
                           trigger={() => <button>Print or Download</button>}
                           content={() => componentRef.current} />
+            </div>
+            <Link to="/methods" className="methods-link"> Learn about all types of methods used in trainings </Link>
         </div>
 
     </div>

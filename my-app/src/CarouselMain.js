@@ -1,9 +1,10 @@
 import React from "react";
 
-import pic1 from "./development/Images/DSC_6569.jpg"
-import pic2 from "./development/Images/DSC_6756.jpg"
-import pic3 from "./development/Images/DSC_6611.jpg"
-import pic4 from "./development/Images/DSC_6613.jpg"
+import pic1 from "./development/Images/pic1.jpg"
+import pic2 from "./development/Images/pic2.jpg"
+import pic3 from "./development/Images/pic3.jpg"
+import pic4 from "./development/Images/pic4.jpg"
+import pic5 from "./development/Images/pic5.jpg"
 
 
 import Carousel from "nuka-carousel";
@@ -19,7 +20,8 @@ const CarouselMain = () => {
         style: {
             width: 1600,
             height: "50vh",
-            borderRadius: 10
+            borderRadius: 10,
+            marginBottom: 10
 
         }
 
@@ -27,10 +29,11 @@ const CarouselMain = () => {
 
     return <div className="carousel carouselMain">
         <Carousel  {...styles}>
-            <img  alt="" src={pic1}/>
-            <img  alt="" src={pic2}/>
             <img  alt="" src={pic3}/>
+            <img  alt="" src={pic2}/>
             <img  alt="" src={pic4}/>
+            <img  alt="" src={pic1}/>
+            <img  alt="" src={pic5}/>
         </Carousel>
     </div>
 

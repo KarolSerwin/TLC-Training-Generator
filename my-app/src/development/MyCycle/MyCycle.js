@@ -35,6 +35,7 @@ const MyCycle = () => {
         const {time, level, focus} = params
 
         let result = trainings.filter(training => training.params.time === time && training.params.level === level && training.params.focus === focus)
+        console.log(result)
         const newResult = result.pop()
 
         setNewParams({
@@ -57,8 +58,6 @@ const MyCycle = () => {
         setDate(new Date().toLocaleDateString())
 
         setShowButtons(true)
-
-
 
     }
 

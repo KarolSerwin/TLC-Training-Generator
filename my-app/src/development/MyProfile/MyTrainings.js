@@ -21,10 +21,11 @@ const MyTrainings = ({trainings}) => {
             animation: "zoom",
             style: {
                 width: 1200,
-                height: "50vh",
+                height: "55vh",
                 marginTop: 50,
                 marginLeft: 90,
-                paddingBottom: 20
+                paddingBottom: 20,
+                borderRadius: 10
             }
         }
 
