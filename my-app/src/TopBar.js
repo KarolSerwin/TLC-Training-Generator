@@ -7,7 +7,7 @@ const TopBar = ({toggle}) => {
 
     return <div className="topBar">
         <button onClick={toggle}>Switch color mode</button>
-        <span>Logged as: {user}</span>
+        <span>Logged in as: {user}</span>
     </div>
 }
 

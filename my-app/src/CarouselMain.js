@@ -14,15 +14,18 @@ const CarouselMain = () => {
     const styles = {
         wrapAround: true,
         animation: "zoom",
+        cellAlign: "center",
+        scrollMode: "page",
         style: {
             width: 1600,
             height: "50vh",
+
         }
 
     }
 
     return <div className="carousel carouselMain">
-        <Carousel {...styles}>
+        <Carousel  {...styles}>
             <img  alt="" src={pic1}/>
             <img  alt="" src={pic2}/>
             <img  alt="" src={pic3}/>

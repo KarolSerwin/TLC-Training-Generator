@@ -19,6 +19,7 @@ const NewTrainingShow = ({training, date, showButtons}) => {
         const firstNewTraining = [{id, date, params, content}]
         const newTraining = {id, date, params, content}
 
+
         if (localStorage.getItem("trainings")) {
 
             const previousTrainings = JSON.parse(localStorage.getItem("trainings"))
@@ -28,10 +29,10 @@ const NewTrainingShow = ({training, date, showButtons}) => {
         } else {
             localStorage.setItem("trainings", JSON.stringify(firstNewTraining))
         }
-
         window.location.reload();
 
     }
+
 
     const handleClickReset = () => {
         window.location.reload();
@@ -43,10 +44,9 @@ const NewTrainingShow = ({training, date, showButtons}) => {
             <NewTrainingParams  trainingParams={params} date={date}/>
             <NewTrainingContent  trainingContent={content} />
         </div>
-
         <div style={{display: showButtons ? "flex" : "none"}} className="trainingGenerator-show-btns">
             <button onClick={handleClickReset}>Reset</button>
-            <button onClick={handleClickSave}>Save Training</button>
+            <button onClick={handleClickSave}>Save Training to My Profile</button>
             <ReactToPrint bodyClass="pdf"
                           documentTitle="TLC training"
                           trigger={() => <button>Print or Download</button>}

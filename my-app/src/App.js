@@ -7,7 +7,7 @@ import {Navigation} from "./Navigation/navigation";
 import {MyProfile} from "./development/MyProfile/MyProfile";
 import {TeamCycle} from "./development/TeamCycle/TeamCycle";
 import {Methods} from "./development/Methods/Methods";
-import {Login} from "./Login";
+import {Login} from "./Login/Login";
 
 import {TopBar} from "./TopBar";
 import './darkMode.scss'
