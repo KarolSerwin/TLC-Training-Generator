@@ -1,35 +1,53 @@
 
 .dark {
-  background-color: #333;
-  color: #fff;
+  background-color: #36464e;
+  color: #f5f5f5;
 
 
 }
 .light {
-  background-color: #fff;
-  color: #333;
+  background-color: #f5f5f5;
+  color: #36464e;
 }
 
 .topBar {
   display: flex;
   justify-content: space-between;
+  padding: 15px 10px;
+
+  button {
+    cursor: pointer;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 5px;
+    font-weight: bold;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
 
 .login {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #69abcc;
 
   p {
     font-weight: bold;
   }
 
   .link {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
+    color: #f5f5f5;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
     &:visited {
-      color: white;
+      color: #f5f5f5;
     }
   }
 
@@ -58,31 +76,3 @@
   }
 }
 
-.app-navig {
-  display: flex;
-  justify-content: space-around;
-  font-size: 40px;
-  list-style: none;
-
-
-  &-link {
-    /*color: white;*/
-    font-weight: bold;
-    text-decoration: none;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-
-    &:hover {
-      font-size: 42px;
-      text-shadow: 2px 2px 2px black;
-      transition: 0.3s;
-    }
-
-    &:visited {
-      text-shadow: 2px 2px 2px black;
-      color: white;
-      border: 1px solid black;
-
-
-    }
-  }
-}

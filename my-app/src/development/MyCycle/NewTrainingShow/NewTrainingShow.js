@@ -15,7 +15,6 @@ const NewTrainingShow = ({training, date, showButtons}) => {
 
     const handleClickSave = () => {
 
-
         const {id, params, content} = training
         const firstNewTraining = [{id, date, params, content}]
         const newTraining = {id, date, params, content}
@@ -44,6 +43,7 @@ const NewTrainingShow = ({training, date, showButtons}) => {
             <NewTrainingParams  trainingParams={params} date={date}/>
             <NewTrainingContent  trainingContent={content} />
         </div>
+
         <div style={{display: showButtons ? "flex" : "none"}} className="trainingGenerator-show-btns">
             <button onClick={handleClickReset}>Reset</button>
             <button onClick={handleClickSave}>Save Training</button>

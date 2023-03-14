@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 
 import {TrainingTime} from "./TrainingTime";
 import {TrainingLevel} from "./TrainingLevel";
@@ -22,10 +22,13 @@ const NewTrainingGenerator = ({getParams}) => {
         })
     }
 
+    const ref = useRef(null)
 
     const handleSubmit = (event) => {
         event.preventDefault()
         getParams(params)
+
+        ref.current.scrollIntoView({behavior: "smooth", block: "end"});
 
         setParams({
             time: "",
@@ -38,7 +41,7 @@ const NewTrainingGenerator = ({getParams}) => {
 
 
     return (
-        <form onSubmit={handleSubmit} className="trainingGenerator-form">
+        <form ref={ref} onSubmit={handleSubmit} className="trainingGenerator-form">
             <h1>Select options for your Training</h1>
             <TrainingTime updateTime={updateState}/>
             <TrainingLevel updateLevel={updateState}/>

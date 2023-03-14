@@ -21,7 +21,7 @@ const CarouselMain = () => {
 
     }
 
-    return <div className="carousel">
+    return <div className="carousel carouselMain">
         <Carousel {...styles}>
             <img  alt="" src={pic1}/>
             <img  alt="" src={pic2}/>

@@ -27,6 +27,8 @@ const MyCycle = () => {
 
     const [showButtons, setShowButtons] = useState(false)
 
+
+
     //funkcja pobierania paramsow z training generator oraz generowania daty
     const getParams = (params) => {
 
@@ -56,7 +58,11 @@ const MyCycle = () => {
 
         setShowButtons(true)
 
+
+
     }
+
+
 
     return <div>
         <div className="trainingGenerator">

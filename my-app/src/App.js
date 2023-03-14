@@ -1,9 +1,9 @@
 import React, {useEffect, useState,} from "react";
-import {BrowserRouter, Link, Route, Routes, Navigate, Outlet} from "react-router-dom";
+import {BrowserRouter, Route, Routes, Navigate, Outlet} from "react-router-dom";
 import './App.scss';
 import {MyCycle} from "./development/MyCycle/MyCycle";
 import {CarouselMain} from "./CarouselMain";
-
+import {Navigation} from "./Navigation/navigation";
 import {MyProfile} from "./development/MyProfile/MyProfile";
 import {TeamCycle} from "./development/TeamCycle/TeamCycle";
 import {Methods} from "./development/Methods/Methods";
@@ -65,12 +65,7 @@ function App() {
     <div className={`App ${theme}`}>
       <TopBar user={user} toggle={toggleTheme}/>
       <CarouselMain/>
-      <ul className="app-navig">
-        <li><Link className="app-navig-link" to="/">My Profile</Link></li>
-        <li><Link className="app-navig-link" to="/my-cycle">My Cycle</Link></li>
-        <li><Link className="app-navig-link" to="/team-cycle">Team Cycle</Link></li>
-        <li><Link className="app-navig-link" to="/methods">TLC Methods</Link></li>
-      </ul>
+      <Navigation/>
       <Routes>
         <Route element={<ProtectedRoutes user={user}/> }>
           <Route path="" element={<MyProfile user={user}/>} />

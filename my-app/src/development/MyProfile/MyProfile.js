@@ -30,7 +30,7 @@ const MyProfile = () => {
             <button className="myProfile-container-logOut-btn"
                     onClick={handleClickLogOut}>Log out</button>
             <h1>Hello {user}</h1>
-            <p style={{paddingBottom: 200}}>Here you have access to all your saved trainings</p>
+            <p>Here you have access to all your saved trainings.</p>
         </div>
     }
 }
