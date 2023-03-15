@@ -2,14 +2,14 @@ import React, {useEffect, useState,} from "react";
 import {BrowserRouter, Route, Routes, Navigate, Outlet} from "react-router-dom";
 import './App.scss';
 import {MyCycle} from "./development/MyCycle/MyCycle";
-import {CarouselMain} from "./CarouselMain";
+import {CarouselMain} from "./CarouselMain/CarouselMain";
 import {Navigation} from "./Navigation/navigation";
 import {MyProfile} from "./development/MyProfile/MyProfile";
 import {TeamCycle} from "./development/TeamCycle/TeamCycle";
 import {Methods} from "./development/Methods/Methods";
 import {Login} from "./Login/Login";
 
-import {TopBar} from "./TopBar";
+import {TopBar} from "./TopBar/TopBar";
 import './darkMode.scss'
 /*
 Font awsome pattern

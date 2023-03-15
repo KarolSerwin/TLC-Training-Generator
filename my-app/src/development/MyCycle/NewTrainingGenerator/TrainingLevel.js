@@ -16,8 +16,8 @@ const TrainingLevel = ({updateLevel}) => {
                 <select name="option"  onChange={handleChange}>
                     <option selected disabled value="choose">choose</option>
                     <option value="beginner">BEGINNER</option>
-                    <option value="intermediate">INTERMEDIATE</option>
-                    <option value="advanced">ADVANCED</option>
+                    <option disabled value="intermediate">INTERMEDIATE</option>
+                    <option disabled value="advanced">ADVANCED</option>
 
                 </select>
             </div>

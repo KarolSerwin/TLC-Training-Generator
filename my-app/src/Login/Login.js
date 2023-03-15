@@ -30,7 +30,7 @@ const Login = ({updateState}) => {
     return <div className="login">
 
         <h1>Welcome to our page! </h1>
-        <h2>please set your Name and correct password </h2>
+        <h2>please set your Name and enter correct password </h2>
         <p>If you don't have password please contact: &nbsp; <a className="link" href="mailto:serwinkarol@gmail.com"> serwinkarol@gmail.com</a></p>
         <div className="login-form">
             <h1>Log In</h1>
