@@ -5,7 +5,9 @@ import pic2 from "./development/Images/pic2.jpg"
 import pic3 from "./development/Images/pic3.jpg"
 import pic4 from "./development/Images/pic4.jpg"
 import pic5 from "./development/Images/pic5.jpg"
-
+import pic6 from "./development/Images/pic6.jpg"
+import pic7 from "./development/Images/pic7.jpg"
+import pic8 from "./development/Images/pic8.jpg"
 
 import Carousel from "nuka-carousel";
 
@@ -17,6 +19,8 @@ const CarouselMain = () => {
         animation: "zoom",
         cellAlign: "center",
         scrollMode: "page",
+        autoplay: true,
+        autoplayInterval: 8000,
         style: {
             width: 1600,
             height: "50vh",
@@ -29,11 +33,14 @@ const CarouselMain = () => {
 
     return <div className="carousel carouselMain">
         <Carousel  {...styles}>
-            <img  alt="" src={pic3}/>
+            <img style={{height: "90%"}} alt="" src={pic3}/>
             <img  alt="" src={pic2}/>
             <img  alt="" src={pic4}/>
-            <img  alt="" src={pic1}/>
+            <img style={{height: "90%"}} alt="" src={pic1}/>
             <img  alt="" src={pic5}/>
+            <img  alt="" src={pic6}/>
+            <img style={{height: "90%"}} alt="" src={pic7}/>
+            <img style={{height: "90%"}} alt="" src={pic8}/>
         </Carousel>
     </div>
 
