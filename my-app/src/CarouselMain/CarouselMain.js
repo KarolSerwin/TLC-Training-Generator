@@ -1,13 +1,13 @@
 import React from "react";
 
-import pic1 from "../development/Images/pic1.jpg"
-import pic2 from "../development/Images/pic2.jpg"
-import pic3 from "../development/Images/pic3.jpg"
-import pic4 from "../development/Images/pic4.jpg"
-import pic5 from "../development/Images/pic5.jpg"
-import pic6 from "../development/Images/pic6.jpg"
-import pic7 from "../development/Images/pic7.jpg"
-import pic8 from "../development/Images/pic8.jpg"
+import pic1 from "./Images/pic1.jpg"
+import pic2 from "./Images/pic2.jpg"
+import pic3 from "./Images/pic3.jpg"
+import pic4 from "./Images/pic4.jpg"
+import pic5 from "./Images/pic5.jpg"
+import pic6 from "./Images/pic6.jpg"
+import pic7 from "./Images/pic7.jpg"
+import pic8 from "./Images/pic8.jpg"
 
 import Carousel from "nuka-carousel";
 

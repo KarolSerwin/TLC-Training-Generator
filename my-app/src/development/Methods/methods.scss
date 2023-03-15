@@ -3,8 +3,32 @@
 .methods-container {
 
   padding: 0 80px;
+
+
+  section {
+    padding: 50px 0;
+
+    h1 {
+      font-size: 40px;
+
+    }
+  }
+
+
+  &-intro {
+    text-indent: 20px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .photo-box {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 50%;
+    }
+  }
+
 }
 
-section {
-  padding: 50px 0;
-}
