@@ -36,7 +36,7 @@ const MyCycle = () => {
 
         let result = trainings.filter(training => training.params.time === time && training.params.level === level && training.params.focus === focus)
         console.log(result)
-        const newResult = result.pop()
+        const newResult = result[Math.floor(Math.random() * result.length)]
 
         setNewParams({
                 id: newResult.id,

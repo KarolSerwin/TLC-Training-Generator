@@ -37,7 +37,7 @@ const MyTrainings = ({trainings}) => {
                         <OneTraining key={index} training={training}/>)}
                 </Carousel>
                </div >
-                <div className="carousel myProfile-container-carousel-btns" style={{display: trainings ? "block" : "none"}}>
+                <div id="myTrainings" className="carousel myProfile-container-carousel-btns" style={{display: trainings ? "block" : "none"}}>
                     <ReactToPrint bodyClass="pdf2"
                                   documentTitle="TLC training"
                                   trigger={() => <button>Print or Download</button>}

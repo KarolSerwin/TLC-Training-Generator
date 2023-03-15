@@ -5,6 +5,7 @@ import {NewTrainingContent} from "./NewTrainingContent";
 
 import ReactToPrint from 'react-to-print'
 import {Link} from "react-router-dom";
+import {HashLink} from "react-router-hash-link";
 
 
 const NewTrainingShow = ({training, date, showButtons}) => {
@@ -30,7 +31,7 @@ const NewTrainingShow = ({training, date, showButtons}) => {
         } else {
             localStorage.setItem("trainings", JSON.stringify(firstNewTraining))
         }
-        window.location.reload();
+        //window.location.reload();
 
     }
 
@@ -48,7 +49,7 @@ const NewTrainingShow = ({training, date, showButtons}) => {
         <div style={{display: showButtons ? "block" : "none"}} className="trainingGenerator-show-btns">
             <div className="trainingGenerator-show-btns-in">
             <button onClick={handleClickReset}>Reset</button>
-            <button onClick={handleClickSave}>Save Training to My Profile</button>
+            <HashLink to="/#myTrainings" className="save-btn" onClick={handleClickSave}>Save Training to My Profile</HashLink>
             <ReactToPrint bodyClass="pdf"
                           documentTitle="TLC training"
                           trigger={() => <button>Print or Download</button>}
